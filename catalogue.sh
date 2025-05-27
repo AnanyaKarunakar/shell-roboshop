@@ -77,7 +77,7 @@ cp $SCRIPT_DIR/mongo.repo /etc/yum.repos.d/mongodb.repo
 dnf install mongodb-mongosh -y &>>$LOG_FILE
 VALIDATE $? "Installing MongoDB Client"
 
-STATUS=$(mongosh --host mongodb.karna.fun --eval 'db.getMongo().getDBNames().indexof("catalogue")')
+STATUS=$(mongosh --host mongodb.karna.fun --eval 'db.getMongo().getDBNames().indexOf("catalogue")')
 if [ $STATUS -lt 0 ]
 then
     mongosh --host mongodb.karna.fun </app/db/master-data.js
