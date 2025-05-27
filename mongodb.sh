@@ -15,7 +15,7 @@ echo "Script started executing at: $(date)" | tee -a $LOG_FILE
 #check the user has root preveleges or not
 if [ $USERID -ne 0 ]
 then
-	echo -e "$R ERROR:: Please run this script with root access $N | tee -a $LOG_FILE
+	echo -e "$R ERROR:: Please run this script with root access $N" | tee -a $LOG_FILE
 	exit 1 #give other than 0 upto 127
 else
 	echo "You are running with root access" | tee -a $LOG_FILE
