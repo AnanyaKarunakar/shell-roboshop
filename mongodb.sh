@@ -31,6 +31,7 @@ VALIDATE(){
 		exit 1
 	fi
 }
+
 cp mongo.repo /etc/yum.repos.d/mongodb.repo
 VALIDATE $? "Copying MongoDB repo"
 
